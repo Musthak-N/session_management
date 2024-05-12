@@ -66,12 +66,16 @@ app.post("/login", (req, res) => {
  res.send("Logged in successfully!");
 });
 app.get("/profile", (req, res) => {
- console.log("profile details=>!", req.session.user);
- res.setHeader("Access-Control-Allow-Origin", "https://smazer-3810a.web.app");
- if (req.session.user) {
-  res.send(`Welcome, ${req.session.user.username}!`);
- } else {
-  res.send("Please log in to view your profile.");
+ try {
+  console.log("profile details=>!", req.session?.user);
+  //  res.setHeader("Access-Control-Allow-Origin", "https://smazer-3810a.web.app");
+  if (req.session?.user) {
+   res.send(`Welcome, ${req.session?.user?.username}!`);
+  } else {
+   res.send("Please log in to view your profile.");
+  }
+ } catch (err) {
+  res.send(err + "");
  }
 });
 
