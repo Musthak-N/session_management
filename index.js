@@ -9,9 +9,10 @@ const redisClient = redis.createClient({
  enable_offline_queue: false,
  //  password: "SBH_PROJECT",
  //  URL: "redis://red-cp0b81a1hbls73e7b1cg:6379",
- host:
-  "rediss://red-cp0b81a1hbls73e7b1cg:6lqeV7LfDkjdDgcdbK2vV1zzfsChlWDs@oregon-redis.render.com",
- port: 6379,
+ //  host:
+ //   "rediss://red-cp0b81a1hbls73e7b1cg:6lqeV7LfDkjdDgcdbK2vV1zzfsChlWDs@oregon-redis.render.com",
+ //  port: 6379,
+ URL: "redis://red-cp0b81a1hbls73e7b1cg:6379",
  //  port: 6379,
  //  host: "redis://red-cp0b81a1hbls73e7b1cg:6379",
  //  port: 6379,
