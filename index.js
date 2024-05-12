@@ -3,6 +3,7 @@ const session = require("express-session");
 const RedisStore = require("connect-redis").default;
 const redis = require("ioredis"); // Adjust host and port if needed
 const cors = require("cors");
+const PORT = process.env.PORT || 6661;
 const redisClient = redis.createClient({
  enable_offline_queue: false,
  password: "SBH_PROJECT",
@@ -59,5 +60,5 @@ app.get("/logout", (req, res) => {
 });
 
 app.listen(6661, () => {
- console.log(`Server listening on http://${6661}`);
+ console.log(`Server listening on http://${PORT}`);
 });
