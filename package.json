@@ -1,18 +1,19 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "musthak",
-  "main": "index.js",
-  "scripts": {
-    "test": "node"
-  },
-  "author": "musthak",
-  "license": "ISC",
-  "dependencies": {
-    "connect-redis": "^7.1.1",
-    "express": "^4.19.2",
-    "express-session": "^1.18.0",
-    "ioredis": "^5.4.1",
-    "redis": "^4.6.13"
-  }
+ "name": "server",
+ "version": "1.0.0",
+ "description": "musthak",
+ "main": "index.js",
+ "scripts": {
+  "test": "node"
+ },
+ "author": "musthak",
+ "license": "ISC",
+ "dependencies": {
+  "connect-redis": "^7.1.1",
+  "express": "^4.19.2",
+  "express-session": "^1.18.0",
+  "ioredis": "^5.4.1",
+  "redis": "^4.6.13",
+  "cors": "^2.8.5"
+ }
 }
