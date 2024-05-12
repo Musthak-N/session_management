@@ -4,10 +4,11 @@ const RedisStore = require("connect-redis").default;
 const redis = require("ioredis"); // Adjust host and port if needed
 const cors = require("cors");
 const PORT = process.env.PORT || 6661;
+
 const redisClient = redis.createClient({
  enable_offline_queue: false,
- password: "SBH_PROJECT",
- host: "localhost",
+ //  password: "SBH_PROJECT",
+ host: "red-cp0b81a1hbls73e7b1cg",
  port: 6379,
 });
 redisClient.on("error", (err) => {
