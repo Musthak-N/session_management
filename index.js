@@ -68,7 +68,7 @@ app.post("/login", (req, res) => {
 app.get("/profile", (req, res) => {
  try {
   console.log("profile details=>!", req.session?.user);
-  //  res.setHeader("Access-Control-Allow-Origin", "https://smazer-3810a.web.app");
+  res.setHeader("Access-Control-Allow-Origin", "https://smazer-3810a.web.app");
   if (req.session?.user) {
    res.send(`Welcome, ${req.session?.user?.username}!`);
   } else {
