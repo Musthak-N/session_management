@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 6661;
 const redisClient = redis.createClient({
  enable_offline_queue: false,
  //  password: "SBH_PROJECT",
- URL: "redis://red-cp0b81a1hbls73e7b1cg:6379",
+ URL: "rediss://red-cp0b81a1hbls73e7b1cg:6lqeV7LfDkjdDgcdbK2vV1zzfsChlWDs@oregon-redis.render.com",
  //  host: "redis://red-cp0b81a1hbls73e7b1cg:6379",
  //  port: 6379,
 });
