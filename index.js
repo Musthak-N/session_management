@@ -58,13 +58,13 @@ app.use(function (req, res, next) {
 // Other middleware and routes
 app.post("/login", (req, res) => {
  console.log("login===>", req.session);
- res.setHeader("Access-Control-Allow-Origin", "https://smazer-3810a.web.app/");
+ res.setHeader("Access-Control-Allow-Origin", "https://smazer-3810a.web.app");
  req.session.user = { id: 1, username: "alice" }; // Example session data
  res.send("Logged in successfully!");
 });
 app.get("/profile", (req, res) => {
  console.log("profile details=>!", req.session.user);
- res.setHeader("Access-Control-Allow-Origin", "https://smazer-3810a.web.app/");
+ res.setHeader("Access-Control-Allow-Origin", "https://smazer-3810a.web.app");
  if (req.session.user) {
   res.send(`Welcome, ${req.session.user.username}!`);
  } else {
