@@ -36,6 +36,7 @@ const sessionMiddleware = session({
   secure: true, // Set to true for HTTPS environments
   httpOnly: false,
   maxAge: 1000 * 60 * 60 * 24, // 24 hours in milliseconds
+  sameSite: "none",
  },
 });
 const corsOptions = {
