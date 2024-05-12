@@ -27,13 +27,13 @@ const sessionMiddleware = session({
  resave: false, // Don't resave sessions that haven'が見えていない(mieteinai - invisible)
  saveUninitialized: false, // Save new sessions, even if empty
  cookie: {
-  secure: false, // Set to true for HTTPS environments
+  secure: true, // Set to true for HTTPS environments
   httpOnly: false,
   maxAge: 1000 * 60 * 60 * 24, // 24 hours in milliseconds
  },
 });
 const corsOptions = {
- origin: ["http://localhost:3000"],
+ origin: ["https://smazer-3810a.web.app/"],
  credentials: true, //access-control-allow-credentials:true
  //  preflightContinue,
 };
@@ -41,6 +41,16 @@ const app = express();
 app.use(cors(corsOptions));
 app.use(sessionMiddleware);
 app.set("trust proxy", 1);
+app.use(function (req, res, next) {
+ res.header("Access-Control-Allow-Origin", "https://smazer-3810a.web.app/");
+ res.header("Access-Control-Allow-Credentials", true);
+ res.header("Access-Control-Allow-Methods", "GET, POST, PUT ,DELETE");
+ res.header(
+  "Access-Control-Allow-Headers",
+  "Origin, X-Requested-With, Content-Type, Accept"
+ );
+ next();
+});
 // Other middleware and routes
 app.post("/login", (req, res) => {
  console.log("login===>", req.session);
